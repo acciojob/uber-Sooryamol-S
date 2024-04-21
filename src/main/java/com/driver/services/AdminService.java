@@ -5,12 +5,9 @@ import java.util.List;
 import com.driver.model.Admin;
 import com.driver.model.Customer;
 import com.driver.model.Driver;
-import com.driver.repository.AdminRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 
 public interface AdminService {
-@Autowired
-private AdminRepository adminRepository;
+
 	public void adminRegister(Admin admin);
 
 	public Admin updatePassword(Integer adminId, String password);
@@ -18,6 +15,6 @@ private AdminRepository adminRepository;
 	public void deleteAdmin(int adminId);
 
 	public List<Driver> getListOfDrivers();
-	
+
 	public List<Customer> getListOfCustomers();
 }
